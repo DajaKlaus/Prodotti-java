@@ -12,13 +12,18 @@ public class Alimentari extends Prodotti{
         alimentari = new ArrayList<>();
     }
 
-    public void setData() {
-        for (int i = 0; i < alimentari.size(); i ++) {
-            alimentari.add(data.getScadenza(i));
-        }
+    public void setData(int i) {
+        alimentari.add(data.getScadenza(i));
     }
 
-    public void applicaSconto2() {
+    public int applicaSconto2() {
+        int sconto = 0;
+        int dif = data.getDifferenza();
 
+        if (dif < 10) {
+            sconto = (super.getPrezzo()*20)/100;
+        }
+
+        return sconto;
     }
 }
