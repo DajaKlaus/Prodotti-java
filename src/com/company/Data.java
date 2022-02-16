@@ -108,6 +108,7 @@ public class Data {
     public int getDifferenza() {
         int differenza = 0;
 
+
         if ((scadenza.get(0).getGiornos() - produzione.get(0).getGiornop()) == 10) {
             differenza = scadenza.get(0).getGiornos() - produzione.get(0).getGiornop();
         }
