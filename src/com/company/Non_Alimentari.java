@@ -30,9 +30,11 @@ public class Non_Alimentari extends Prodotti{
 
     public void controlloMateriale() {
         String mat = Materiale();
+        int prezzo = prodotti.getPrezzo();
 
-        if (mat.equalsIgnoreCase("carta")) {
-
+        if (mat.equalsIgnoreCase("carta") || mat.equalsIgnoreCase("vetro") || mat.equalsIgnoreCase("plastica")) {
+            prezzo -= applicaSconto10();
+            System.out.println("il prezzo è ora di: " + prezzo);
         }
     }
 }
