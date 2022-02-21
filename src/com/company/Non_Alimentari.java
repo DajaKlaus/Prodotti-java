@@ -20,8 +20,8 @@ public class Non_Alimentari extends Prodotti{
         return materiale;
     }
 
-    public int applicaSconto10() {
-        int sconto = 0;
+    public double applicaSconto10() {
+        double sconto = 0;
 
         sconto = (super.getPrezzo()*10)/100;
 
@@ -30,7 +30,7 @@ public class Non_Alimentari extends Prodotti{
 
     public void controlloMateriale() {
         String mat = Materiale();
-        int prezzo = prodotti.getPrezzo();
+        double prezzo = prodotti.getPrezzo();
 
         if (mat.equalsIgnoreCase("carta") || mat.equalsIgnoreCase("vetro") || mat.equalsIgnoreCase("plastica")) {
             prezzo -= applicaSconto10();

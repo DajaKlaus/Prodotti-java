@@ -16,7 +16,7 @@ public class Alimentari extends Prodotti{
         listaAlimentari = new ArrayList<>();
     }
 
-    public void setProdotto(int c, String d, int p) {
+    public void setProdotto(int c, String d, double p) {
         prodotti.setCodice(c);
         prodotti.setDescrizione(d);
         prodotti.setPrezzo(p);
@@ -26,11 +26,12 @@ public class Alimentari extends Prodotti{
 
     public void setData(int i) {
         alimentariS.add(data.getScadenza(i));
+        System.out.println("la data di scadenza è: " + data.getScadenza(i));
     }
 
-    public int applicaSconto2() {
-        int sconto = 0;
-        int dif = data.getDifferenza();
+    public double applicaSconto20() {
+        double sconto = 0;
+        double dif = data.getDifferenza();
 
         if (dif < 10) {
             sconto = (super.getPrezzo()*20)/100;

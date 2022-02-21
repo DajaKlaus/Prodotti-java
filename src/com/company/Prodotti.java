@@ -3,7 +3,7 @@ package com.company;
 public class Prodotti {
     private int codice;
     private String descrizione;
-    private int prezzo;
+    private double prezzo;
 
     public Prodotti() {
         codice = 0;
@@ -11,9 +11,9 @@ public class Prodotti {
         prezzo = 0;
     }
 
-    public int applicaSconto() {
-        int prezzoScontato = 0;
-        int sconto = 0;
+    public double applicaSconto() {
+        double prezzoScontato = 0;
+        double sconto = 0;
 
         sconto = (prezzo * 5) / 100;
         prezzoScontato = prezzo - sconto;
@@ -29,7 +29,7 @@ public class Prodotti {
         this.descrizione = descrizione;
     }
 
-    public void setPrezzo(int prezzo) {
+    public void setPrezzo(double prezzo) {
         this.prezzo = prezzo;
     }
 
@@ -41,7 +41,7 @@ public class Prodotti {
         return descrizione;
     }
 
-    public int getPrezzo() {
+    public double getPrezzo() {
         return prezzo;
     }
 

@@ -151,9 +151,7 @@ public class Data {
         return produzione;
     }
 
-    public Data getScadenza(int i) {
-        return scadenza.get(i);
-    }
+    public Data getScadenza(int i) { return scadenza.get(i); }
 
     public int getGiornop() {
         return giornop;
